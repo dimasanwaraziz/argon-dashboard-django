@@ -8,8 +8,6 @@ from decouple import config
 from unipath import Path
 import dj_database_url
 
-DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = Path(__file__).parent
 CORE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -103,7 +101,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Jakarta'
 
 USE_I18N = True
 
@@ -125,3 +123,6 @@ STATICFILES_DIRS = (
 )
 #############################################################
 #############################################################
+
+DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+
