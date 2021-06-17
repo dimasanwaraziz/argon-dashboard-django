@@ -4,6 +4,7 @@ Copyright (c) 2019 - present AppSeed.us
 """
 
 import os
+import django_heroku
 from decouple import config
 from unipath import Path
 import dj_database_url
@@ -125,4 +126,6 @@ STATICFILES_DIRS = (
 #############################################################
 
 DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+# Activate Django-Heroku.
+django_heroku.settings(locals())
 
