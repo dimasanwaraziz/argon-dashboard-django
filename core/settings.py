@@ -125,7 +125,7 @@ STATICFILES_DIRS = (
 #############################################################
 #############################################################
 
-DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+DATABASES['default'] = dj_database_url.config(default=f"sqlite:////{os.path.join(CORE_DIR, 'db.sqlite3')}", conn_max_age=600)
 # Activate Django-Heroku.
 django_heroku.settings(locals())
 
