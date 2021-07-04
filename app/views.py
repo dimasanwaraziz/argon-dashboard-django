@@ -15,8 +15,25 @@ def index(request):
     context = {}
     context['segment'] = 'index'
 
-    html_template = loader.get_template( 'index.html' )
-    return HttpResponse(html_template.render(context, request))
+    # html_template = loader.get_template( 'index.html' )
+    # return HttpResponse(html_template.render(context, request))
+    return render(request, "index.html", context)
+
+@login_required(login_url="/login/")
+def deposit(request):
+    
+    context = {}
+    context['segment'] = 'deposit'
+
+    return render(request, "deposit.html", context)
+
+@login_required(login_url="/login/")
+def start_invest(request):
+    
+    context = {}
+    context['segment'] = 'start-invest'
+
+    return render(request, "start-invest.html", context)
 
 @login_required(login_url="/login/")
 def pages(request):

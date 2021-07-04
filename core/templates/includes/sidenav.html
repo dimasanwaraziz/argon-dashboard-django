@@ -90,16 +90,16 @@
         <!-- Navigation -->
         <ul class="navbar-nav">
           <li class="nav-item">
-          <a class=" nav-link {% if 'index' in segment %} active {% endif %}" href="/"> <i class="ni ni-tv-2 text-primary"></i> Dashboard
+          <a class=" nav-link {% if 'index' in segment %} active {% endif %}" href="{% url 'home' %}"> <i class="ni ni-tv-2 text-primary"></i> Dashboard
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {% if 'icons' in segment %} active {% endif %}" href="/icons.html">
+            <a class="nav-link {% if 'deposit' in segment %} active {% endif %}" href="{% url 'deposit' %}">
               <i class="ni ni-planet text-blue"></i> Deposit
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {% if 'tables' in segment %} active {% endif %}" href="/tables.html">
+            <a class="nav-link {% if 'start-invest' in segment %} active {% endif %}" href="{% url 'start-invest' %}">
               <i class="ni ni-bullet-list-67 text-info"></i> Start investment
             </a>
           </li>
